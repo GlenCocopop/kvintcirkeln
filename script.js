@@ -17,7 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Ta en bild när knappen klickas
-    snapButton.addEventListener('click', function() {
-        context.drawImage(video, 0, 0, 640, 480);
-    });
+snapButton.addEventListener('click', function() {
+    context.drawImage(video, 0, 0, 640, 480);
+
+    // Skapa en ny ColorThief-instans och få de mest framträdande färgerna
+    const colorThief = new ColorThief();
+    const dominantColors = colorThief.getPalette(canvas, 6); // Ändra 6 till det antal färger du vill ha
+
+    console.log(dominantColors); // Visar en array av RGB-färgvärden
 });
