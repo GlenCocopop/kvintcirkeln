@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         context.drawImage(video, 0, 0, 640, 480);
         setTimeout(function() {
             const colorThief = new ColorThief();
-            const dominantColors = colorThief.getPalette(canvas, 6);
+            const dominantColors = colorThief.getPalette(canvas, 8);
             const tones = dominantColors.map(color => colorToTone(color));
             const uniqueTones = [...new Set(tones)];
 
