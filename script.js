@@ -17,24 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Ta en bild när knappen klickas
-
+    // Din befintliga kod för att fånga bilden
 
 snapButton.addEventListener('click', function() {
     context.drawImage(video, 0, 0, 640, 480);
 
-// Skapa en ny ColorThief-instans och få de mest framträdande färgerna
-// const colorThief = new ColorThief();
-// const dominantColors = colorThief.getPalette(canvas, 6); // Ändra 6 till det antal färger du vill ha
+    // Skapa en ny ColorThief-instans och få de mest framträdande färgerna
+    const colorThief = new ColorThief();
+    const dominantColors = colorThief.getPalette(canvas, 6); // Ändra 6 till det antal färger du vill ha
 
-// Visa färgerna på webbsidan
-// const colorsDiv = document.getElementById('colors');
-// colorsDiv.innerHTML = ''; // Rensa befintligt innehåll
-// dominantColors.forEach(color => {
-//     const colorDiv = document.createElement('div');
-//     colorDiv.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
-//     colorDiv.style.width = '100px';
-//     colorDiv.style.height = '100px';
-//     colorDiv.style.display = 'inline-block';
-//     colorDiv.style.margin = '10px';
-//     colorsDiv.appendChild(colorDiv);
-// });
+    console.log(dominantColors); // Visar en array av RGB-färgvärden
+});
